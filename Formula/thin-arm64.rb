@@ -2,7 +2,7 @@ class ThinArm64 < Formula
   desc "Thin universal macOS apps to ARM64 only — libère de l'espace sur Apple Silicon"
   homepage "https://github.com/fabburst/thin-arm64"
   url "https://github.com/fabburst/thin-arm64/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "79de8db03d6d74d8730cdeaf5755e0bc6fea90da4497f82c86b2202f06b1c718"
+  sha256 "2383034931beeb451b11b005fcd7e7ae202c84fd409f3b22f811617be6b931f1"
   license "MIT"
 
   depends_on "go" => :build
