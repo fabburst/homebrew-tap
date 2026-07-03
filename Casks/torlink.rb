@@ -10,4 +10,9 @@ cask "torlink" do
   depends_on arch: :arm64
 
   binary "torlink-macos-arm64", target: "torlink"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-d", "-r", "com.apple.quarantine", staged_path.to_s]
+  end
 end
