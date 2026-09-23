@@ -8,14 +8,16 @@ cask "fabquit" do
   homepage "https://github.com/fabburst/FabQuit"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "FabQuit.app"
 
   # Not notarized: remove the quarantine flag so Gatekeeper lets it open.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-d", "-r", "com.apple.quarantine", "#{appdir}/FabQuit.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-d", "-r", "com.apple.quarantine", "FabQuit.app"],
+        chdir:        "{{appdir}}",
+        must_succeed: false
   end
 
   zap trash: [
