@@ -1,6 +1,6 @@
 cask "torlink" do
-  version "null"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  version "1.2.0"
+  sha256 "f585d39e6a49bf2c8945a863343a39d305c5af943a5b8aa484434beb3ec47ae4"
 
   url "https://github.com/fabburst/torlink-macos/releases/download/v#{version}-mac/torlink-macos-arm64.zip"
   name "torlink"
